@@ -1,8 +1,6 @@
 import React,{Component} from 'react';
-import { StyleSheet,ImageBackground, ScrollView, Text, View } from 'react-native';
+import { Button,StyleSheet,ImageBackground, ScrollView, Text, View } from 'react-native';
 import {unitWidth, width,unitHeight,height} from "./AdapterUtil";
-import { black } from 'react-native-paper/lib/typescript/src/styles/colors';
-import { Button } from 'react-native-paper';
 
 
 export default class Screen extends Component{
@@ -17,7 +15,7 @@ export default class Screen extends Component{
     //source={{uri: urlHttp}}
     render(){
       return(
-        <View>
+        <View style={styles.body}>
         <View style={styles.box}>
         <ImageBackground 
       style={styles.backimg}
@@ -54,13 +52,16 @@ Screen.defaultProps={
   img:"https://s1.ax1x.com/2020/08/28/doK2xP.jpg"
 }
   const styles = StyleSheet.create({
+    body:{
+       marginHorizontal:75*unitWidth,
+    },
     box:{
         width:unitWidth*600,
         height:unitHeight*600,
         overflow:'hidden',
         flex:1,
         borderRadius:10,
-        margin:20*unitHeight,
+       
     },
     backimg:{
       width:"100%",
@@ -68,17 +69,17 @@ Screen.defaultProps={
     },
     title:{
     textAlign:'center',
-    lineHeight:"30%",
+    lineHeight:unitHeight*200,
     width:"100%",
-    height:"30%",
+    height:unitHeight*200,
     fontSize:24,
     color:"white",
     },
     time:{
     textAlign:'center',
-    lineHeight:"50%",
+    lineHeight:unitHeight*300,
     width:"100%",
-    height:"50%",
+    height:unitHeight*300,
     fontSize:36,
     color:"white",
     },

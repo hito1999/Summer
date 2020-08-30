@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
-import { StyleSheet,ImageBackground, ScrollView, Text, View } from 'react-native';
+import { Button,StyleSheet,ImageBackground, ScrollView, Text, View } from 'react-native';
 import {unitWidth, width,unitHeight,height} from "./AdapterUtil";
-import { black } from 'react-native-paper/lib/typescript/src/styles/colors';
 
 export default class MoveBox extends Component{
     constructor(props) {
